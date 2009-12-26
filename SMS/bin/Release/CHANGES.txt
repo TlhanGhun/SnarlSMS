@@ -1,0 +1,7 @@
+1.0
+Initial version
+
+1.1
+Working on Windows 7
+All available speeches are registered as schemes of the style
+Options dialog added
