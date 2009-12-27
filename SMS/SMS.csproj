@@ -58,12 +58,14 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Winkle, Version=0.4.0.4, Culture=neutral, PublicKeyToken=97173e2aee0cc9b2, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crypto.cs" />
     <Compile Include="Options.cs">
       <SubType>Form</SubType>
     </Compile>

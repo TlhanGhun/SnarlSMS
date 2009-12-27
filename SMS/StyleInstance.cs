@@ -61,14 +61,13 @@ namespace SMS
                 return;
             }
             WebClient client = new WebClient ();
-            // Add a user agent header in case the requested URI contains a query.
             client.Headers.Add ("user-agent", "Snarl style to send SMS");
             client.QueryString.Add("user", Properties.Settings.Default.username);
-            client.QueryString.Add("password", Properties.Settings.Default.password);
+            client.QueryString.Add("password", Crypto.ToInsecureString(Crypto.DecryptString(Properties.Settings.Default.password)));
             client.QueryString.Add("api_id", "3212636");
             client.QueryString.Add("to", Properties.Settings.Default.phonenumber);
             client.QueryString.Add("text", NotificationInfo.Title + " :" + NotificationInfo.Text);
-            string baseurl ="http://api.clickatell.com/http/sendmsg";
+            string baseurl ="https://api.clickatell.com/http/sendmsg";
             Stream data = client.OpenRead(baseurl);
             StreamReader reader = new StreamReader (data);
             string s = reader.ReadToEnd ();

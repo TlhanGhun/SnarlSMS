@@ -98,7 +98,7 @@ namespace SMS
         [ComVisible(true)]
         int IStyleEngine.Revision()
         {
-            return 2;
+            return 3;
         }
 
         [ComVisible(true)]

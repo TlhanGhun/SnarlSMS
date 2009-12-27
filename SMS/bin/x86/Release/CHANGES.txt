@@ -1,20 +1,9 @@
 1.0
-Initial version
+Initial version with hardcoded credentials
 
 1.1
-Working on Windows 7
-All available speeches are registered as schemes of the style
-Options dialog added
+User settings now included
 
 1.2
-First beta
-
-1.3
-Fixed bug in scheme selection
-
-1.4
-Changed binary to x86 to hopefully let it work on 64Bit
-
-2.0
-Changed speech synthesizer to system.speech
-Added auto update feature
+Password now saved encyrpted
+Communication to clickatell.com now using HTTPS

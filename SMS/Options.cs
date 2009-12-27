@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using SMS;
 
+
 namespace SMS
 {
     public partial class Options : Form
@@ -16,7 +17,7 @@ namespace SMS
         {
             InitializeComponent();
 
-            this.textBox_password.Text = Properties.Settings.Default.password;
+            this.textBox_password.Text = Crypto.ToInsecureString(Crypto.DecryptString(Properties.Settings.Default.password));
             this.textBox_username.Text = Properties.Settings.Default.username;
             this.textBox_phonenumber.Text = Properties.Settings.Default.phonenumber;
 
@@ -35,7 +36,7 @@ namespace SMS
 
         private void textBox_password_TextChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.password = this.textBox_password.Text;
+            Properties.Settings.Default.password = Crypto.EncryptString(Crypto.ToSecureString(this.textBox_password.Text));
         }
 
         private void textBox_phonenumber_TextChanged(object sender, EventArgs e)

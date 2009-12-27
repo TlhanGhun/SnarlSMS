@@ -2,8 +2,8 @@
 !include "checkDotNet3.nsh"
 !include "getDotNetDir.nsh"
 
-!define MIN_FRA_MAJOR "2"
-!define MIN_FRA_MINOR "0"
+!define MIN_FRA_MAJOR "3"
+!define MIN_FRA_MINOR "5"
 !define MIN_FRA_BUILD "*"
 
 !define ENGINE_NAME "SMS"
